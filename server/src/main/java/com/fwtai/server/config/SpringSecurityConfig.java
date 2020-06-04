@@ -35,12 +35,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
-        http.requestMatchers().antMatchers("/oauth/**", "/login/**","/doLogin","/sso/**", "/logout/**")
+        http.requestMatchers().antMatchers("/oauth/**", "/login", "/logout/**")
             .and()
             .authorizeRequests()
             .antMatchers("/oauth/**").authenticated()
             .and()
-            .formLogin().loginPage("/login.html").loginProcessingUrl("/sso/login").permitAll()
+            .formLogin().loginPage("/login.html").loginProcessingUrl("/login").permitAll()
             //.formLogin().permitAll();
             .and().csrf().disable();//没有这个会报错 There was an unexpected error (type=Forbidden, status=403).
     }

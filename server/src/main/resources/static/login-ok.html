@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>统一认证服务平台</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+<div class="nav_header">
+    <div class="company">
+        <span>统一认证登录认证服务</span>
+    </div>
+</div>
+<div class="contentBox">
+    <div class="leftBox">
+        <span>5G</span>
+        <br/>
+        <span>互联网+</span>
+        <br/>
+        <span>BIGDATA</span>
+        <br/>
+        <span>物联网</span>
+    </div>
+    <div class="loginBox">
+        <!--<form method="post" action="/sso/login">
+            账号:<input type="text" name="userName" value="user" placeholder="登录账号" />
+            <br />
+            密码:<input type="password" name="password" value="123456" placeholder="登录密码" />
+            <br />
+            <button type="button" type="submit">登录0认证</button>
+        </form>-->
+
+        <form method="post" action="/sso/login">
+            <p>
+                <label for="username" class="sr-only">登录账号</label>
+                <input type="text" id="username" name="username" value="user" placeholder="登录账号" required autofocus>
+            </p>
+            <p>
+                <label for="password" class="sr-only">登录密码</label>
+                <input type="password" id="password" name="password" value="123456" placeholder="登录密码" required>
+            </p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">登录0认证</button>
+        </form>
+
+    </div>
+</div>
+<div class="copyright">
+    <span>2018-2028 © 版权所有：<a href="javascript:;">贵州驼峰科技有限责任公司</a></span>
+    <span>客服QQ：444141300</span>
+    <span>地址：贵州省贵阳市云岩区未来方舟F4团</span>
+</div>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.placeholder.min.js"></script>
+</body>
+</html>

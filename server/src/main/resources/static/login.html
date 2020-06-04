@@ -22,11 +22,13 @@
         <span>物联网</span>
     </div>
     <div class="loginBox">
-        账号:<input type="text" id="userName" value="user" placeholder="登录账号" />
-        <br />
-        密码:<input type="password" id="password" value="123456" placeholder="登录密码" />
-        <br />
-        <button type="button" id="btnLogin">登录认证</button>
+        <form method="post" action="/sso/login">
+            账号:<input type="text" id="username" name="username" value="user" placeholder="登录账号" />
+            <br />
+            密码:<input type="password" id="password" name="password" value="123456" placeholder="登录密码" />
+            <br />
+            <button type="submit">登录认证</button>
+        </form>
     </div>
 </div>
 <div class="copyright">
@@ -35,9 +37,6 @@
     <span>地址：贵州省贵阳市云岩区未来方舟F4团</span>
 </div>
 <script src="js/jquery-1.12.4.min.js"></script>
-<script src="js/layer/layer.js"></script>
-<script src="js/page.common.js"></script>
 <script src="js/jquery.placeholder.min.js"></script>
-<script src="js/login.js"></script>
 </body>
 </html>

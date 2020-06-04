@@ -40,7 +40,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             .antMatchers("/oauth/**").authenticated()
             .and()
-            .formLogin().loginPage("/index.html").loginProcessingUrl("/sso/login").permitAll()
+            .formLogin().loginPage("/login.html").loginProcessingUrl("/sso/login").permitAll()
             //.formLogin().permitAll();
             .and().csrf().disable();//没有这个会报错 There was an unexpected error (type=Forbidden, status=403).
     }

@@ -26,12 +26,12 @@
                 username : userName,
                 password : password
             };
-            this.ajaxPost('/sso/login',params);
+            this.ajaxPost('/login',params);
         },
         ajaxPost : function(url,params){
             $.ajax({
                 type : "POST",
-                url : urlPrefix + url,
+                url : url,
                 dataType : "json",
                 data : params,
                 beforeSend : function(){

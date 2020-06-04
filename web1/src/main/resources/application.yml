@@ -1,0 +1,17 @@
+server:
+  port: 8086
+security:
+  oauth2:
+    client:
+      client-id: web1
+      client-secret: 123456
+      #登录认证接口路径
+      user-authorization-uri: http://www.sso.com:8080/oauth/authorize
+      #访问token的路径
+      access-token-uri: http://www.sso.com:8080/oauth/token
+      #认证成功后跳转的url,若是不填写的话,那就是事先访问的url认证后跳转到原访问的URL
+      registered-redirect-uri:
+    resource:
+      jwt:
+        #获取token的路径
+        key-uri: http://www.sso.com:8080/oauth/token_key

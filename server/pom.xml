@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>sso_server</artifactId>
+        <groupId>com.fwtai</groupId>
+        <version>v1.0.0</version>
+    </parent>
+    <groupId>com.pjb</groupId>
+    <artifactId>server</artifactId>
+    <version>v1.0.0</version>
+    <name>server</name>
+    <description>
+
+        在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.2.6.RELEASE
+
+        基于spring boot + spring security 构建sso单点登录项目,父工程是 spring boot 版本
+
+        子系统客户端:
+        #认证成功后跳转的url,若是不填写的话,那就是事先访问的url认证后跳转到原访问的URL
+        registered-redirect-uri:
+
+        认证中心:
+        //加上验证后回调地址???若是客户端不填写的话,那就是事先访问的url认证后跳转到原访问的URL
+        .autoApprove(true)
+        .redirectUris("http://localhost:8086/login")
+
+    </description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!--web的MVC配置-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.2.6.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

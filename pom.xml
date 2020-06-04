@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.fwtai</groupId>
+  <artifactId>sso_server</artifactId>
+    <packaging>pom</packaging>
+    <version>v1.0.0</version>
+    <modules>
+        <module>server</module>
+        <module>web1</module>
+        <module>web2</module>
+    </modules>
+
+    <url>http://www.yinlz.com</url>
+    <description>
+
+        认证服务器端必要要配置 context-path: /sso ???
+
+        在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.1.13.RELEASE
+        在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.2.6.RELEASE
+
+        基于spring boot + spring security 构建sso单点登录项目,父工程是 spring boot 版本
+
+        子系统客户端:
+        #认证成功后跳转的url,若是不填写的话,那就是事先访问的url认证后跳转到原访问的URL
+        registered-redirect-uri:
+
+        认证中心:
+        //加上验证后回调地址???若是客户端不填写的话,那就是事先访问的url认证后跳转到原访问的URL
+        .autoApprove(true)
+        .redirectUris("http://localhost:8086/login")
+
+    </description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <build>
+    <pluginManagement>
+        <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

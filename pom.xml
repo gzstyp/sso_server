@@ -31,7 +31,6 @@
         认证中心:
         //加上验证后回调地址???若是客户端不填写的话,那就是事先访问的url认证后跳转到原访问的URL
         .autoApprove(true)
-        .redirectUris("http://localhost:8086/login")
 
     </description>
 

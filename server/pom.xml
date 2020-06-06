@@ -13,7 +13,7 @@
     <name>server</name>
     <description>
 
-        在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.2.6.RELEASE
+        在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.2.7.RELEASE
 
         基于spring boot + spring security 构建sso单点登录项目,父工程是 spring boot 版本
 
@@ -37,22 +37,22 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.2.6.RELEASE</version>
+            <version>2.2.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>2.2.6.RELEASE</version>
+            <version>2.2.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security.oauth.boot</groupId>
             <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-            <version>2.2.6.RELEASE</version>
+            <version>2.2.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>2.2.6.RELEASE</version>
+            <version>2.2.7.RELEASE</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

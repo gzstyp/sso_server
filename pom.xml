@@ -20,7 +20,7 @@
         在IE8环境下是有问题，可以换其他的sso单点登录功能实现，可以参考(单点登录原理与简单实现) https://www.cnblogs.com/ywlaker/p/6113927.html
 
         在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.1.13.RELEASE
-        在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.2.6.RELEASE
+        在版本 2.1.13.RELEASE 的注解@EnableOAuth2Sso 不提示未过时,但在2.2.0.RELEASE及后面的版本提示已过时,但不影响使用,注意版本要一致!!!,子项目使用的版本是2.2.7.RELEASE
 
         基于spring boot + spring security 构建sso单点登录项目,父工程是 spring boot 版本
 
